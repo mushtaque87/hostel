@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import injectSheet from 'react-jss'
 import classNames from 'classnames';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import logo from '../../resources/assets/homestay.png'
+import logo from '../../resources/assets/homestaylogoround.png'
 const NavigationBar = (props) => {
 
     const {  classes , rowIndex } = props;

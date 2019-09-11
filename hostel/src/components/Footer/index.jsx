@@ -22,17 +22,17 @@ const Footer = (props) => {
       <div className={classNames('col-lg-auto',footerDesign)}>
         <div  key='contact' className = {classNames('col-md-auto',contactUsDesign)}> 
         <div style={{color: 'white' , fontFamily: 'Pacifico, cursive'}}><b>Contact Us:</b></div>
-        <div>Gul Afroz:<b style={{color: 'white' , fontFamily: 'Josefin Sans, sans-serif'}} > 9937570544</b></div>
-        <div>Gulam Farook:<b style={{color: 'white' , fontFamily: 'Josefin Sans, sans-serif'}}> 7077380540</b></div>
+        <div>Gul Afroz:<b> <a href="tel:09937570544"  style={{color: 'white' , fontFamily: 'Josefin Sans, sans-serif'}}> 09937570544 </a></b></div>
+        <div>Gulam Faruk:<b><a href="tel:07077380540"  style={{color: 'white' , fontFamily: 'Josefin Sans, sans-serif'}}> 07077380540</a></b></div>
         </div>
-        <div key='location' className = {classNames('col-md-auto',locationDesign)}>  
+        {/* <div key='location' className = {classNames('col-md-auto',locationDesign)}>  
         <p>Location:</p>
         <button className = {classNames(locationButtonDesign)} ><img className = {classNames(locationButtonDesign)} src={iconpath+'location.png'} onClick = {toggleLogOutModal}/></button>
-        </div>
-        <div key='share' className = {classNames('col-md-auto',shareDesign)}>  
+        </div> */}
+        {/* <div key='share' className = {classNames('col-md-auto',shareDesign)}>  
         <p>Share with Friends:</p>
         <button className = {classNames(locationButtonDesign)} ><img className = {classNames(locationButtonDesign)} src={iconpath + 'facebook.png'}/></button>
-        </div>
+        </div> */}
       </div>
     );
 
@@ -42,8 +42,7 @@ const Footer = (props) => {
     const showModal = (
 
          <ModalView modal = {modalState} view = {map}>
-
-             </ModalView>
+        </ModalView>
 
     )
 
@@ -72,7 +71,7 @@ const jssStyles = {
     contactUsDesign: {
         // display: 'flex',
         // flexWrap: 'wrap',
-        minWidth: '50%',
+        minWidth: '100%',
         height: '99%',
         backgroundColor:'#1d3148',
         padding:'5px',

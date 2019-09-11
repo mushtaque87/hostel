@@ -30,6 +30,8 @@ const PictureGallery = (props) => {
     return <div class='row-md-auto'>
         {galleryTitleLabel}
         {galleryTableRow(1)}
+        {galleryTableRow(1)}
+        {galleryTableRow(1)}
         <br></br>
         {galleryTableRow(2)}
         {galleryTableRow}

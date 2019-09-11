@@ -15,6 +15,9 @@ class Home extends Component {
         <Location/>
         {/* {pictureGallery} */}
         {/* <Pricing/> */}
+        <br></br>
+        <br></br>
+        <br></br>
         </Container>
     }
 

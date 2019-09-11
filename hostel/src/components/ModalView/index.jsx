@@ -5,7 +5,7 @@ import { Modal, ModalBody, ModalFooter } from 'reactstrap';
 const ModalView = (props) => {
 
     const {  classes  , modal , view } = props;
-     const { modalDialog, modalBody, modalButton, modalFooter, modalLogOutBtn, modalCancelBtn } = classes;
+     const { modalDialog, closeModalButtonDesign } = classes;
 
     const  toggleLogOutModal = () => {
         
@@ -14,20 +14,29 @@ const ModalView = (props) => {
     const modalView = (
         modal ? 
         <Modal isOpen={modal} toggle={toggleLogOutModal} classNames = {classNames(modalDialog)}> 
-
         {view}
         </Modal>  : null
+    );
+
+    const closeModalView = (
+        <button className = {classNames(closeModalButtonDesign)} > XXXX </button>
     );
 
     return (
         <>
             {modalView}
+            
         </>
     );
 
 };
 
 const jssStyles = {
+
+    closeModalButtonDesign: {
+        width:'30px',
+        height: '30px',
+     },
 
     modalDialog: {
         width: '600px',
