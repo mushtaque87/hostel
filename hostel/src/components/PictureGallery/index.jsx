@@ -10,7 +10,7 @@ const PictureGallery = (props) => {
     const galleryTitleLabel = (
         <h3 id="auto-layout-col-sizing" class="Heading-styles-module--heading">
             <div class="Heading-styles-module--inner">
-                <span class="Anchor-styles-module--wrapper">Picture Gallery:
+                <span class="Anchor-styles-module--wrapper" style={{color: '#4b5b77' , fontFamily: 'Pacifico, cursive'}}>Our Rooms:
                 </span>
                 <br/>
                 </div>
@@ -32,7 +32,7 @@ const PictureGallery = (props) => {
         {galleryTableRow(1)}
         <br></br>
         {galleryTableRow(2)}
-        //{galleryTableRow}
+        {galleryTableRow}
     </div>;
 
 

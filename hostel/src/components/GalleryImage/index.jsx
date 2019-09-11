@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import injectSheet from 'react-jss';
 import classNames from 'classnames';
-import room1 from '../../resources/assets/room-1-1.jpg'
+
 const GalleryImage = (props) => {
     const {  classes , rowIndex  , imagePath =  process.env.PUBLIC_URL + '/assets/'} = props;
     const { cellDesign, imageDesign } = classes;
@@ -23,12 +23,13 @@ const GalleryImage = (props) => {
 const jssStyles = {
 
     cellDesign: {
-        width: '200px',
+        minWidth: '130px',
+        maxWidth:'200px',
         height: '200px',
-        backgroundColor:'#f25060',
+        backgroundColor:'#4f9c8a',
         padding:'5px',
         margin:'15px',
-        borderRadius:'10px',
+        borderRadius:'5px',
     },
 
     imageDesign: {
@@ -36,14 +37,13 @@ const jssStyles = {
         height: '100%',
     },
     
-    '@media (max-width: 767px)': {
-  
-    
-    },
 
-    '@media (min-width: 768px) and (max-width: 1024px)': {
+    '@media (min-width: 168px) and (max-width: 768px)': {
     
-      
+        cellDesign: {
+            minWidth:'90%',
+            maxWidth:'auto !important',
+        },
        
     }
 };

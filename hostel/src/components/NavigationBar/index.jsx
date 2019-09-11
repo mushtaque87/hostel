@@ -4,41 +4,80 @@ import Nav from 'react-bootstrap/Nav';
 import injectSheet from 'react-jss'
 import classNames from 'classnames';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-
-import logo from '../../logo.svg'
+import logo from '../../resources/assets/homestay.png'
 const NavigationBar = (props) => {
 
     const {  classes , rowIndex } = props;
-    const {navDesign , navTab , titleTextDesign } = classes;
+    const {navDesign , navTab , titleTextDesign, locationTextDesign , theTextDesign } = classes;
 
     const navbar = (
     <Navbar className={classNames('col-lg-auto',navDesign)}  expand="lg">
-          <a className={classNames(titleTextDesign)} > Modern Ladies PG</a> 
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="#home" className={classNames(navTab)}>Home</Nav.Link>
-          <Nav.Link href="#link" className={classNames(navTab)}>Pricing</Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
+    <img src={logo} width="100" height="100" class="d-inline-block align-top" alt=""></img>
+    <div className={classNames(titleTextDesign)}>
+    <a className={classNames(theTextDesign)} > New </a> 
+    <a className={classNames(titleTextDesign)} > HomeStay </a> 
+    </div>
+    
+    <a className={classNames(locationTextDesign)} > Padampur </a> 
+
     </Navbar>
     );
 
-    return <>{navbar}</>;
+
+    return <>
+    {navbar}
+    
+        </>;
 
 };
 
 const jssStyles = {
 
     navDesign: {
-        backgroundColor:'#f25060',
+        backgroundColor:'#4b5b77',
     },
 
     titleTextDesign : {
         color:'white !important',
+        fontFamily: 'Satisfy, cursive',
+        fontSize: '40px',
+        fontWeight: 'bold',
+        fontStyle: 'normal',
+        fontStretch: 'normal',
+        lineHeight: 'normal',
+        letterSpacing: 'normal',
+        wordWrap: 'break-word',
+        margin:'0 auto',
+        padding:'5px',
+    },
+    locationTextDesign : {
+        color:'white !important',
+        width: '120px',
+        right: '2px',
+        bottom:'1px',
+        position: 'absolute',
+        textAlign: 'end',
         fontFamily: 'LatoRegular',
-        fontSize: '34px',
+        fontSize: '12px',
         fontWeight: 'normal',
+        fontStyle: 'normal',
+        fontStretch: 'normal',
+        lineHeight: 'normal',
+        letterSpacing: 'normal',
+        wordWrap: 'break-word',
+        margin:'0 auto',
+        padding:'5px',
+    },
+    theTextDesign : {
+        color:'white !important',
+        width: '120px',
+        left: '25px',
+        top:'-32px',
+        position: 'relative',
+        textAlign: 'end',
+        fontFamily: 'Satisfy, cursive',
+        fontSize: '25px',
+        fontWeight: 'bold',
         fontStyle: 'normal',
         fontStretch: 'normal',
         lineHeight: 'normal',

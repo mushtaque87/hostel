@@ -1,16 +1,23 @@
 import React, { useState } from 'react';
 import injectSheet from 'react-jss';
 import classNames from 'classnames';
+import helper from '../../service/helper';
+import PriceTable from '../PriceTable';
 
 
 const Pricing = (props) => {
     const {  classes , roomImageurl } = props;
     const { galleryTableDesign  } = classes;
 
-    const galleryTitleLabel = (
+   
+    const fetchPrice = () => {
+        helper.readPriceFile()
+    };
+
+    const pricingTitleLabel = (
         <h3 id="auto-layout-col-sizing" class="Heading-styles-module--heading">
             <div class="Heading-styles-module--inner">
-                <span class="Anchor-styles-module--wrapper">Picture Gallery:
+                <span class="Anchor-styles-module--wrapper">Pricing:
                 </span>
                 <br/>
                 </div>
@@ -18,8 +25,11 @@ const Pricing = (props) => {
     );
 
 
-    return <div class='row-md-auto'>
-       
+    return <div  className={classNames('row-md-auto')}>
+       {pricingTitleLabel}
+       <div  className={galleryTableDesign}>
+           <PriceTable/>
+    </div>
     </div>;
 
 
@@ -27,25 +37,10 @@ const Pricing = (props) => {
 
 const jssStyles = {
 
-    galleryTitle: {
-        width: '100%',
-        height: 'auto',
-        fontFamily: 'LatoRegular',
-        fontSize: '14px',
-        fontWeight: 'normal',
-        fontStyle: 'normal',
-        fontStretch: 'normal',
-        lineHeight: 'normal',
-        letterSpacing: 'normal',
-        overflow: 'hidden',
-        color: '#425271',
-        wordWrap: 'break-word',
-        margin:'0 auto',
-        padding:'5px',
-    },
-
-
     galleryTableDesign: {
+        maxWidth:'100%',
+        height:'250px',
+        backgroundColor:'red',
         display : 'flex',
         alignItems:'center',
     },
