@@ -1,0 +1,26 @@
+{
+	"price": [{
+			"type": "Single Sharing",
+			"price": 2200,
+			"availability": false,
+			"number": 3,
+			"withFood": 2600
+
+		},
+		{
+			"type": "Double Sharing",
+			"price": 1600,
+			"availability": true,
+			"number": 3,
+			"withFood": 2000
+
+		},
+		{
+			"type": "Triple Sharing",
+			"price": 1200,
+			"availability": true,
+			"number": 3,
+			"withFood": 1600
+		}
+	]
+}
