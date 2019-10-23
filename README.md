@@ -1,2 +1,5 @@
 # hostel
-A demo app for designing a hotel/hostel  using react framework.
+A demo app for designing a basic Web App using React framework with Responsive Design. 
+
+![iPad] (iPad.png)
+![iPhone] (iPhone.png)
